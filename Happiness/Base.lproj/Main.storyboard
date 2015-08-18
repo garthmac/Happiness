@@ -1,25 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jn5-Cn-7g2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Happiness View Controller-->
+        <scene sceneID="hvb-fP-hHE">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jn5-Cn-7g2" customClass="HappinessViewController" customModule="Happiness" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="toN-an-xmF"/>
+                        <viewControllerLayoutGuide type="bottom" id="uUH-Lp-OLw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="ZlK-4t-vOg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NGc-uj-3Fk" customClass="FaceView" customModule="Happiness" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvX-8n-2bB">
+                                        <rect key="frame" x="8" y="551" width="113" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Wink LEFT">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="winkLeft:" destination="jn5-Cn-7g2" eventType="touchUpInside" id="Qev-mb-BKk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuS-jr-44A">
+                                        <rect key="frame" x="462" y="551" width="130" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Wink RIGHT">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="winkRight:" destination="jn5-Cn-7g2" eventType="touchUpInside" id="BAZ-yc-9yA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtQ-pz-l4D">
+                                        <rect key="frame" x="13" y="502" width="52" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Blink">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="blink" destination="jn5-Cn-7g2" eventType="touchUpInside" id="V1m-8Z-aCM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="jvX-8n-2bB" firstAttribute="top" secondItem="NtQ-pz-l4D" secondAttribute="bottom" constant="8" id="5qJ-uM-IAf"/>
+                                    <constraint firstAttribute="bottom" secondItem="fuS-jr-44A" secondAttribute="bottom" constant="8" id="IAS-Ts-PaO"/>
+                                    <constraint firstAttribute="bottom" secondItem="jvX-8n-2bB" secondAttribute="bottom" constant="8" id="Yo0-Zh-hyA"/>
+                                    <constraint firstItem="jvX-8n-2bB" firstAttribute="leading" secondItem="NGc-uj-3Fk" secondAttribute="leading" constant="8" id="ciX-hN-OZ5"/>
+                                    <constraint firstItem="NtQ-pz-l4D" firstAttribute="leading" secondItem="NGc-uj-3Fk" secondAttribute="leading" constant="13" id="eoA-HU-E4x"/>
+                                    <constraint firstAttribute="trailing" secondItem="fuS-jr-44A" secondAttribute="trailing" constant="8" id="u5w-c4-cVC"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rkD-mJ-ywe" appends="YES" id="Ct7-Rk-Rv9"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NGc-uj-3Fk" firstAttribute="top" secondItem="ZlK-4t-vOg" secondAttribute="top" id="CkQ-k9-CSE"/>
+                            <constraint firstItem="NGc-uj-3Fk" firstAttribute="bottom" secondItem="uUH-Lp-OLw" secondAttribute="top" id="EeH-AF-jm1"/>
+                            <constraint firstItem="NGc-uj-3Fk" firstAttribute="leading" secondItem="ZlK-4t-vOg" secondAttribute="leading" id="luh-Ic-qhh"/>
+                            <constraint firstAttribute="trailing" secondItem="NGc-uj-3Fk" secondAttribute="trailing" id="nsM-m4-w43"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="NGc-uj-3Fk" id="e3I-zq-n63"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lx-dT-ITn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="rkD-mJ-ywe">
+                    <connections>
+                        <action selector="changeHappiness:" destination="jn5-Cn-7g2" id="gCo-7E-M6o"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-99" y="238"/>
         </scene>
     </scenes>
 </document>
